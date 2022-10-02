@@ -7,7 +7,7 @@ function ToDoForm(todos) {
   function handleSubmit(e) {
     e.preventDefault();
     if (!value) return;
-    todos.setTodos([...todos.todos, { text: value, isCompleted: false }]);
+    props.setTodos([...props.todos, { text: value, isCompleted: false, start: Date.now() }]);
     setValue("");
   }
   return (
