@@ -1,4 +1,4 @@
-function ToDoForm(props) {
+function ToDoForm({todos, setTodos}) {
   // initialie form state
   const [value, setValue] = React.useState("");
   // console.log("todos:",todos)
@@ -7,7 +7,7 @@ function ToDoForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
     if (!value) return;
-    props.setTodos([...props.todos, { text: value, isCompleted: false, start: Date.now() }]);
+    setTodos([...todos, { text: value, isCompleted: false, start: Date.now() }]);
     setValue("");
   }
   return (

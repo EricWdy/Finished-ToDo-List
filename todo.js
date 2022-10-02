@@ -7,9 +7,9 @@ function ToDo(props) {
       return (<>Started</>);
     } 
     if (running && lastStart !== props.todo.start) {
-        return (<>Resumed. Time already spent: {min} mins</>)
+        return (<>Resumed. Time already spent: {Math.floor(min)} mins</>)
     }
-    if (!running) return (<>Stopped. Time spent: {min} mins</>);
+    if (!running) return (<>Stopped. Time spent: {Math.floor(min)} mins</>);
     };
 
   function handle(e) {
