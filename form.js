@@ -1,4 +1,4 @@
-function ToDoForm(todos) {
+function ToDoForm(props) {
   // initialie form state
   const [value, setValue] = React.useState("");
   // console.log("todos:",todos)
